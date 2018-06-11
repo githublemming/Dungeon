@@ -10,7 +10,7 @@ import GameplayKit
 
 class PlayerEntity: GKEntity {
 
-    init(overlayScene: OverlayScene) {
+    init(overlayScene: GameOverlayScene) {
 
         super.init()
 

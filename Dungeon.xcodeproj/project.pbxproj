@@ -21,8 +21,9 @@
 		08A64DD820C32E0100C4263E /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A64DD720C32E0100C4263E /* Level.swift */; };
 		08B85F6120CB228F00CF0EC2 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B85F6020CB228F00CF0EC2 /* Monster.swift */; };
 		08B85F6320CB251300CF0EC2 /* MonsterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B85F6220CB251300CF0EC2 /* MonsterType.swift */; };
+		08BB562020CF09A10037B822 /* HomeOverlayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BB561F20CF09A10037B822 /* HomeOverlayScene.swift */; };
 		08D1D0DC20C1CE3A00A2F452 /* HudMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D1D0DB20C1CE3A00A2F452 /* HudMessage.swift */; };
-		08D1D10620C1D4E400A2F452 /* OverlayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D1D10520C1D4E400A2F452 /* OverlayScene.swift */; };
+		08D1D10620C1D4E400A2F452 /* GameOverlayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D1D10520C1D4E400A2F452 /* GameOverlayScene.swift */; };
 		08D1D10C20C1D7C800A2F452 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D1D10B20C1D7C800A2F452 /* Direction.swift */; };
 		08D4E4B520C2C51D00A49F5F /* PlayerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D4E4B420C2C51D00A49F5F /* PlayerEntity.swift */; };
 		08D4E4B720C2C5A700A49F5F /* PlayerControlComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D4E4B620C2C5A700A49F5F /* PlayerControlComponent.swift */; };
@@ -59,8 +60,9 @@
 		08A64DD720C32E0100C4263E /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		08B85F6020CB228F00CF0EC2 /* Monster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
 		08B85F6220CB251300CF0EC2 /* MonsterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterType.swift; sourceTree = "<group>"; };
+		08BB561F20CF09A10037B822 /* HomeOverlayScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeOverlayScene.swift; sourceTree = "<group>"; };
 		08D1D0DB20C1CE3A00A2F452 /* HudMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudMessage.swift; sourceTree = "<group>"; };
-		08D1D10520C1D4E400A2F452 /* OverlayScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayScene.swift; sourceTree = "<group>"; };
+		08D1D10520C1D4E400A2F452 /* GameOverlayScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverlayScene.swift; sourceTree = "<group>"; };
 		08D1D10B20C1D7C800A2F452 /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		08D4E4B420C2C51D00A49F5F /* PlayerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerEntity.swift; sourceTree = "<group>"; };
 		08D4E4B620C2C5A700A49F5F /* PlayerControlComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerControlComponent.swift; sourceTree = "<group>"; };
@@ -112,7 +114,6 @@
 				08D1D10B20C1D7C800A2F452 /* Direction.swift */,
 				08DBFD4B20C0894C0022E1F5 /* GameController.swift */,
 				08B85F6220CB251300CF0EC2 /* MonsterType.swift */,
-				08D1D10520C1D4E400A2F452 /* OverlayScene.swift */,
 				0807915520BF47AA007B378B /* art.scnassets */,
 				0807912620BF4450007B378B /* Assets.xcassets */,
 			);
@@ -202,7 +203,9 @@
 		9060179EF6B135A9E18B9817 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				08D1D10520C1D4E400A2F452 /* GameOverlayScene.swift */,
 				9060129582531A6325F6E372 /* HomeScene.swift */,
+				08BB561F20CF09A10037B822 /* HomeOverlayScene.swift */,
 				9060147A51A85175FCCEA4A8 /* LevelScene.swift */,
 			);
 			path = Scenes;
@@ -289,10 +292,11 @@
 				08DBFD4C20C0894C0022E1F5 /* GameController.swift in Sources */,
 				08B85F6320CB251300CF0EC2 /* MonsterType.swift in Sources */,
 				086BE9AD20CD6E3800DD4A16 /* HomeScreenState.swift in Sources */,
-				08D1D10620C1D4E400A2F452 /* OverlayScene.swift in Sources */,
+				08D1D10620C1D4E400A2F452 /* GameOverlayScene.swift in Sources */,
 				086BE9AF20CD6E4400DD4A16 /* GameActiveState.swift in Sources */,
 				08D4E4BD20C2CCFE00A49F5F /* PlayerNodeComponent.swift in Sources */,
 				08D4E4B520C2C51D00A49F5F /* PlayerEntity.swift in Sources */,
+				08BB562020CF09A10037B822 /* HomeOverlayScene.swift in Sources */,
 				08D1D0DC20C1CE3A00A2F452 /* HudMessage.swift in Sources */,
 				08A64DD820C32E0100C4263E /* Level.swift in Sources */,
 				08D4E4B720C2C5A700A49F5F /* PlayerControlComponent.swift in Sources */,

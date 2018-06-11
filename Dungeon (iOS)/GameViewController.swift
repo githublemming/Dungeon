@@ -20,7 +20,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.gameController = GameController(sceneRenderer: gameView)
+        self.gameController = GameController(sceneView: gameView)
         
         // Configure the view
         self.gameView.backgroundColor = UIColor.black

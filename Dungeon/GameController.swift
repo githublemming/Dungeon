@@ -12,25 +12,21 @@ import GameplayKit
 
 class GameController: NSObject, SCNSceneRendererDelegate, HomeSceneDelegate {
 
-    let sceneRenderer: SCNSceneRenderer
-
     var stateMachine: GKStateMachine?
 
-    init(sceneRenderer renderer: SCNSceneRenderer) {
+    init(sceneView: SCNView) {
         
-        sceneRenderer = renderer
-
         super.init()
 
         stateMachine = GKStateMachine(states:[
-            HomeScreenState(sceneRenderer: sceneRenderer, listener: self),
-            GameActiveState(sceneRenderer: sceneRenderer)]
+            HomeScreenState(view: sceneView, listener: self),
+            GameActiveState(view: sceneView)]
         )
 
         stateMachine?.enter(HomeScreenState.self)
 
-        sceneRenderer.delegate = self
-        sceneRenderer.isPlaying = true
+        sceneView.delegate = self
+        sceneView.isPlaying = true
     }
 
     func startGame() {

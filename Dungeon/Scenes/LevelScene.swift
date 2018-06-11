@@ -9,16 +9,11 @@ import SceneKit
 class LevelScene: SCNScene {
 
     var level: Level
-    let overlayScene: OverlayScene
 
     var player: PlayerEntity!
     var entityManager: MonsterEntityManager!
 
-    init(sceneRenderer renderer: SCNSceneRenderer) {
-
-        let sceneView = renderer as? SCNView
-        overlayScene = OverlayScene(size: (sceneView?.bounds.size)!)
-        sceneView?.overlaySKScene = overlayScene
+    init(view: SCNView, overlayScene: GameOverlayScene) {
 
         self.level = Level1()
 
@@ -38,7 +33,6 @@ class LevelScene: SCNScene {
 
     required init?(coder aDecoder: NSCoder) {
 
-        self.overlayScene = OverlayScene(size: CGSize(width:10,height:10))
         self.level = Level1()
 
         super.init(coder: aDecoder)

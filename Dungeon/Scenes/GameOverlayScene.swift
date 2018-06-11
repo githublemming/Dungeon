@@ -13,7 +13,7 @@ protocol OverlaySceneDelegate: AnyObject {
     func move(direction: HudMessage)
 }
 
-class OverlayScene: SKScene {
+class GameOverlayScene: SKScene {
     
     var forwardNode: SKSpriteNode!
     var turnLeftNode: SKSpriteNode!

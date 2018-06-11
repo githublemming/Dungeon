@@ -10,17 +10,26 @@ import GameplayKit
 
 class HomeScreenState: GKState {
 
-    unowned let scene: SCNSceneRenderer
-    let listener: HomeSceneDelegate
-
-    init(sceneRenderer renderer: SCNSceneRenderer, listener: HomeSceneDelegate) {
-        self.scene = renderer
-        self.listener = listener
+    let sceneView: SCNView
+    
+    let homeScene: HomeScene
+    let homeOverlay: HomeOverlayScene
+    
+    init(view: SCNView, listener: HomeSceneDelegate) {
+        
+        self.sceneView = view
+        
+        self.homeOverlay = HomeOverlayScene(size: view.bounds.size)
+        self.homeOverlay.homeOverlayDelegate = listener
+        
+        self.homeScene = HomeScene()
     }
 
     override func didEnter(from previousState: GKState?) {
         super.didEnter(from: previousState)
-        self.scene.scene = HomeScene(sceneRenderer: self.scene, listener: listener)
+        
+        self.sceneView.scene = self.homeScene
+        self.sceneView.overlaySKScene = homeOverlay
     }
 
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
@@ -30,8 +39,6 @@ class HomeScreenState: GKState {
     override func willExit(to nextState: GKState) {
         super.willExit(to: nextState)
 
-        let sceneView = scene as? SCNView
-        sceneView?.overlaySKScene = SKScene()
-
+        sceneView.overlaySKScene = SKScene()
     }
 }
